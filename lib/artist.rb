@@ -21,6 +21,7 @@ class Artist
   def self.find_by_name(name)
     @@all.detect do |artist|
       artist.name == name
+    end
   end
 
   def self.create_by_name(name)
@@ -31,10 +32,10 @@ class Artist
     @songs << song
   end
 
-  # def save
-  #   @@all.push(self)
-  #   #the thing we just saved now gets returned instead of the whole array
-  #   self
-  # end
+  def save
+    @@all.push(self)
+    #the thing we just saved now gets returned instead of the whole array
+    self
+  end
 
 end
