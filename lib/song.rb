@@ -9,7 +9,8 @@ class Song
 
   def artist=(artist)
     @artist = artist
-    artist.add_song(self)
+    artist.add_song(self) unless artist.songs.include?(self)
+    #self is halo
   end
 
   def self.new_from_filename(filename)
