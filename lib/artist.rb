@@ -31,10 +31,10 @@ class Artist
     @songs << song
   end
 
-  def save
-    @@all.push(self)
-    #the thing we just saved now gets returned instead of the whole array
-    self
-  end
+  # def save
+  #   @@all.push(self)
+  #   #the thing we just saved now gets returned instead of the whole array
+  #   self
+  # end
 
 end
