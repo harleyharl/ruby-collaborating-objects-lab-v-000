@@ -19,12 +19,12 @@ class Artist
   end
 
   def self.find_by_name(name)
-    @@al.detect do |artist|
+    @@all.detect do |artist|
       artist.name == name
   end
 
   def self.create_by_name(name)
-
+    self.new(name).save
   end
 
   def add_song(song)
