@@ -1,5 +1,5 @@
 class Song
-
+  attr_accessor :genre
   attr_reader :artist, :name
 
   def initialize(name)
@@ -17,6 +17,7 @@ class Song
     artist_name, song_name, genre_name = filename.chomp(".mp3").split(" - ")
     song = self.new(song_name)
     song.artist = Artist.find_or_create_by_name(artist_name)
+    song.genre = genre_name
   end
 
 end
