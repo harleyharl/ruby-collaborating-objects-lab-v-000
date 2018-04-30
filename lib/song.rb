@@ -17,7 +17,7 @@ class Song
 
   def save
     @@all << self
-    self.push
+    self
   end
 
 
