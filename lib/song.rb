@@ -7,7 +7,18 @@ class Song
     @artist = nil
   end
 
+
+  #persistence methods
   @@all = []
+
+  def self.all
+    @@all
+  end
+
+  def save
+    @@all << self
+  end 
+
 
   def artist=(artist)
     @artist = artist
